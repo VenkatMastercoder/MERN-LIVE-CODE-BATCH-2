@@ -1,0 +1,81 @@
+.heading {
+  color: red;
+  background-color: red;
+}
+
+.card {
+  background-color: green;
+  /* width: 500px; */
+  height: 50vh;
+  width: 50vw;
+
+}
+
+.img {
+
+  /*px : 👇*/
+  /* width: 200px;
+  height: 150px; */
+
+  /*em : 👇*/
+  /* width: 5em; */
+
+  /*viewport : windown SIZE 👇*/
+  /* height: 100vh;
+  width: 200vw; */
+  /* height: 100vh;  */
+  /* 100vh -> 100% */
+
+  /*px,em,viewport*/
+}
+
+.btn {
+  background-color: red;
+  width: 100px;
+  height: 50px;
+
+  border-width: 5px;
+  /* 
+    border-top-width:1px;
+    border-bottom-width:2px;
+    border-left-width:1px;
+    border-right-width:1px; 
+  */
+
+  border-color: yellow;
+
+  /* 
+    border-top-color: aqua;
+    border-bottom-color: green;
+    border-left-color: blue;
+    border-right-color: brown; 
+  */
+
+  border-radius: 5px; 
+
+  /* 
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; 
+  */
+
+  margin: 5px;
+
+  /* 
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+    margin-right: 20px; 
+  */
+
+  
+  /* padding: 30px; */
+
+  /* 
+    padding-top: 15px;
+    padding-bottom: 15px; 
+  */
+
+
+}
