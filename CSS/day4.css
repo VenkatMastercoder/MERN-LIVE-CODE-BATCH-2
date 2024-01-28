@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&display=swap');
+
+.heading {
+  /* propertry : value */
+  color: #1968e6;
+  /* font-size: 50px; */
+  font-family: "Poppins", sans-serif;
+  /* font-weight: 600; */
+  text-decoration: line-through;
+}
+
+.card {
+  background-color: aqua;
+  text-align: center;
+  background-image: url("https://img.freepik.com/free-photo/aerial-overhead-vertical-shot-beautiful-ocean-waves-with-plane-flying_181624-3371.jpg?w=740&t=st=1705154840~exp=1705155440~hmac=5c9ae6b606e75f4e8c7fed93d086e3029fdfe81cd9e94b2b96dbf0aac297d930");
+  height: 700px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.paragraph {
+  background-color: red;
+  font-size: 50px;
+  text-decoration: overline;
+}
+
+.button {
+  background-color: #1968e6;
+  width: 150px;
+  height: 50px;
+  color: white;
+}

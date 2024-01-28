@@ -1,0 +1,138 @@
+<!DOCTYPE html> <!--Version of HTML 5-->
+<!--
+ 1. Protocols : 
+    - Set of rules to commincate b/w Two Computer [ Client and sever ]
+  - HTTPS - lOCK DATA 
+  - HTTP - UNSAFE
+  - SMTP - MAIL PROTOCOLS 
+
+ 2. IP ADDRESS 
+      - PHONE - 192.100.000.1000 
+      - PUB - 192.100.000.1000 [ SERVER ]
+      - PRI 
+  [142.250.195.110] - google.com [ diff ]
+
+  3. url - [uniform Resource Locator ] -  google.com
+    - https://www.google.com/index.html ==> https://www.google.com/
+    - https -> Protocol
+    - google.com - > Domain Name [ PAID /FREE ]
+    - index.html -> Path
+  4. Domain Registras ->  [ namecheap , GoDaddy]
+    
+  5. DNS 
+    - [ Domain NAME System ]
+    - NAME -> PHONE NUMBER 
+    - PUB I.P -> DOMAIN NAME [ DNS ]
+
+    HTML : CONTENT 
+      - TEXT 
+        - HEADING
+        - PARA
+        - BUTTON
+        - A 
+        - STRONG
+      - MEDIA 
+       - IMG ✅
+       - AUD ✅
+       - VID ✅
+      - LOCAL STORE
+      - CDN
+  -->
+
+<html>
+
+<head>
+  <title>DAY - 4</title>
+</head>
+
+<body>
+  <h1>HEADING</h1>
+  <h2>HEADING</h2>
+  <h3>HEADING</h3>
+  <h4>HEADING</h4>
+  <h5>HEADING</h5>
+  <h6>HEADING</h6>
+
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos sapiente ut vero animi quisquam provident architecto,
+    quam consequatur incidunt in excepturi explicabo molestiae dolore doloremque impedit, magnam rem voluptate hic!</p>
+
+  <button>CLICK HERE</button>
+
+  <!--
+      a -> element 
+      <a></a> -> tag 
+      href -> Attribute 
+    -->
+
+  <a href="https://www.google.com" target="_blank">
+    <h1>HEADING</h1>
+  </a>
+
+  <p>Lorem ipsum dolor <strong>amet consectetur</strong> adipisicing elit. Eum suscipit quisquam minima pariatur dolore,
+    reprehenderit, laborum officiis et quo dolorem earum nostrum adipisci neque ad eveniet tenetur, ullam expedita
+    maxime?</p>
+
+  <!--
+    Media Element 
+  -->
+  <!--VOID TAG : SELF  -->
+
+
+  <!--Single IMG , VID , AUD-->
+  <!-- <img src="../assets/sea-img.jpg"/> -->
+
+  <!-- <img src="https://ik.imagekit.io/4z8covdo9/MERN%20BATCH%202/maldives-island?updatedAt=170498156311" alt="SEA-IMG"/> -->
+
+
+  <!--VIA LOCAL-->
+  <!-- <audio src="../assets/music.mp3" type="audio/mp4" controls></audio> -->
+
+  <!--VIA CDN-->
+  <audio src="https://ik.imagekit.io/4z8covdo9/MERN%20BATCH%202/music.mp3?updatedAt=1704982350657" type="audio/mp4"
+    controls></audio>
+
+  <!-- 
+  <video src="../assets/video.mp4" type="video/mp4" controls></video>  -->
+
+  <!--2 WAY : MULTIPE VID , IMG , AUD -->
+<!-- 
+  <picture>
+    <source src="../assets/sea-img.jpg">
+    <source src="../assets/sea-img.jpg">
+    <source src="../assets/sea-img.jpg">
+    <source src="../assets/sea-img.jpg">
+    <img src="../assets/sea-img.jp">
+    dcldkfmkmf
+  </picture>
+
+  <audio controls>
+    <source src="">
+    <source src="../assets/music.mp3">
+    YOUR BROWSER DOES NOT SUPP
+  </audio>
+
+
+  <video controls>
+    <source src="../assets/video.mp4">
+    <source src="../assets/video.mp4">
+    YOUR BROWSER DOES NOT SUPP
+  </video> -->
+
+  <!--FORM : ✅ , CONT , LOGIN , ETC -->
+  <form action="./day1.html">
+    <label for="email">EMAIL</label>
+    <input type="email" id="email" placeholder="ENTER A EMAIL" required/> 
+    <!--VOID TAG-->
+
+    <label for="password">PASSWORD</label>
+    <input type="password" id="password" placeholder="ENTER A PASSWORD" required/> 
+
+    <button type="submit">SUMBIT</button>
+
+    <!-- <input type="submit" value="SUMBIT BTN"/> -->
+  </form>
+
+
+</body>
+
+</html>

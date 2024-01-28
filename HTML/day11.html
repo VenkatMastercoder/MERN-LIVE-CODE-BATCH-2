@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day - 11</title>
+
+  <link rel="stylesheet" href="./CSS/day11.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <!-- width : 120px -->
+  <div class="box box1">Box 1</div>
+  <div class="box box2">Box 2</div>
+  <!-- width : 120px : content-box [def] => w : w+p+b = 120 + 2 * 10 + 0 = 140px -->
+  <div class="box box3">Box 3</div>
+  <!-- width : 120px : content-box [def] => w : w+p+b = 120 + 2 * 10 + 2 * 10 = 160 px -->
+
+  <button class="cursor-pointer bg-red-300 p-5">Sumbit Button</button>
+ 
+  <div class="parent">
+    <div class="child">
+      <p>CHILD TAG</p>
+    </div>
+  </div>
+
+  <div>
+    <div class="w-56 h-56 bg-white text-white m-5 text-center shadow-inner">
+      <p>card</p>
+    </div>
+  </div>
+<!-- 
+  <div class="w-56 h-56 bg-white text-white m-5 text-center shadow-lg ">21</div>
+  <div class="w-56 h-56 bg-white text-white m-5 text-center  shadow-xl ">21</div>
+  <div class="w-56 h-56 bg-white text-white m-5 text-center  shadow-2xl ">21</div>
+
+  <div class="drop-shadow-md ...">
+  
+  </div>
+  <div class="drop-shadow-lg ...">
+    
+  </div>
+  <div class="drop-shadow-xl ...">
+  
+  </div>
+  <div class="drop-shadow-2xl ...">
+   
+  </div> -->
+
+  <button class="vibrate-1 bg-red-500 rounded-md p-5">Login Btn</button>
+
+  <!--
+    Specificity : 
+
+    1 > inline CSS < Top > 
+    2 > ID Selector 
+    3 > Class Selector 
+    4 > Tag or Element Selector < least >
+    5 > Universal Selector  
+
+       - Selector 
+        - try to sectect the html element IT Help Inj CSS
+        - types 
+          - Class Selector  [ .selector-name ] ✅
+          - ID Selector [ #selector-name ]
+          - Universal Selector  [ * ] ✅
+          - Pseudo Selector  [ : ] 
+          - element or tag Selector 
+
+    Inheritance : 
+
+
+  -->
+      less                 greater         top
+  <p class="paragraph b" id="paragraph-id"  style="color: blue;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet placeat doloremque officia voluptatibus reiciendis illo, repellendus obcaecati, praesentium quae perferendis facere eligendi expedita voluptatem suscipit rerum nihil voluptates, iure est.</p>
+
+  <p class="paragraph b">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet placeat doloremque officia voluptatibus reiciendis illo, repellendus obcaecati, praesentium quae perferendis facere eligendi expedita voluptatem suscipit rerum nihil voluptates, iure est.</p>
+
+
+
+</body>
+
+</html>
