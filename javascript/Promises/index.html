@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promise</title>
+</head>
+
+<body>
+  <p>Test</p>
+
+
+  <script>
+    /* JS Exection
+      - Synchronous - line by line JS Def
+      - Asynchronous - Fetch [ Asynchronous Exection ]
+    */
+    // console.log("HELLO")
+    // alert("First")
+    // alert("Second")
+    // alert("Third")
+    // console.log("BEFORE API CALL")
+
+    const data = fetch("https://apis.ccbp.in/jokes/random")
+    // Asynchronous Exection JS WILL NOT WAIT
+    /*
+       Fetch - 
+        - is Making a API TO SERVER 
+        - API TO DB 
+        - DB DATA TO SERVER 
+        - DATA TO FRONTEND
+     - 10 SEC
+   */
+    // Brow API
+    console.log("DATA:", data) // Promise 
+    /*
+      - State : pending - 
+        After 10 sec - Fullfilled  
+      - data or value : Result - ✅
+
+    - State : pending - 
+        After 10 sec - Rejected  
+      - data : Result - ❌
+    */
+
+    // console.log("After API CALL")
+
+    /*
+     understand : 
+      - Every time a Asynchronous Exection you will get a Promise
+       OR 
+      - Promise is Way to handle Asynchronous Exection
+     def 
+      - A Promise is Object that Reprsents a result that will be Returned
+      at some point of time 
+
+      Object
+        - state
+          Pending - Neither Fullfilled 
+          Resolved state
+            - Fullfilled ✅
+            - Rejected - ❌
+        - Data : Response - Ans Result
+    */
+
+    /* 
+      - How to Handle Asynchronous Exection OR How See to the Data
+
+      - Way 
+        - OLD WAY  [ Before ES6 ]
+          - then [ is used to handle Fullfilled ] 
+          - catch [ is used to handle Rejected ] 
+
+        - NEW WAY [ After ES6 ]
+          - Async/Await - modern way to handle Promise
+    */
+
+    const data2 = fetch("https://apis.ccbp.in/jokes/random") 
+    // Promise - pending
+
+    // // this then will only handle Resolved State 
+    data2
+      .then(function (response) {
+        console.log("after 10 sec", response)
+        return response.json() // Asynchronous Exection
+      })
+      .then(function (data) {
+        console.log("ans:", data)
+      })
+      .catch(function (error) {
+        //     // Rejected
+        console.log(error)
+      })
+
+    // console.log("data2:", data2);
+
+    // New way to Handle Promise
+    async function api() {
+
+      try {
+        //Async/Await
+        // FETCH - DEF - GET METHOD
+        const data3 = await fetch("https://baconipsum.com/api/?type=all"); //Promise 5sec 
+
+        const response = await data3.json();
+
+        console.log("data3", response)
+      }
+      catch (error) {
+        console.log(error)
+      }
+
+    }
+
+    api()
+
+    console.log("After API CALL")
+
+  </script>
+</body>
+
+</html>

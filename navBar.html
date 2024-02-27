@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>NavBar</title>
+</head>
+
+<body>
+
+  <header>
+    <div class="2xl:container bg-green-500 h-[10vh]">
+      <div class="w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2 bg-red-500 h-[100%]">
+        <div class="bg-gray-500 flex justify-between items-center h-[10vh]">
+          <a href="./navBar.html">
+            <p>Logo</p>
+          </a>
+
+          <div class="lg:hidden">
+
+            <div class="bg-red-500" id="humbuger">
+              <svg viewbox="0 0 1024 1024" fill="#000" height="1em" width="1em">
+                <path
+                  d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z" />
+              </svg>
+            </div>
+
+            <div class="hidden" id="cross">
+              <svg fill="none" viewbox="0 0 15 15" height="1em" width="1em">
+                <path fill="currentColor" fillrule="evenodd"
+                  d="M11.782 4.032a.575.575 0 10-.813-.814L7.5 6.687 4.032 3.218a.575.575 0 00-.814.814L6.687 7.5l-3.469 3.468a.575.575 0 00.814.814L7.5 8.313l3.469 3.469a.575.575 0 00.813-.814L8.313 7.5l3.469-3.468z"
+                  cliprule="evenodd" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="hidden lg:block h-[100%]" id="dropdown">
+          <ul
+            class="flex flex-col justify-center space-y-4 items-center lg:flex-row lg:justify-end lg:items-center lg:space-x-5 lg:bg-yellow-200 h-[100%]">
+            <li id="home"> <a href="#section2"></a>HOME</li>
+            <li id="aboutPage"><a href="./day1.html">day 1 page</a></li>
+            <li>HOME</li>
+            <li>HOME</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <script>
+
+    const humbuger = document.getElementById("humbuger");
+    // <div class="hidden"> </div>
+    const dropdown = document.getElementById("dropdown");
+
+    const cross = document.getElementById("cross");
+
+    const aboutPage = document.getElementById("aboutPage");
+
+
+    humbuger.addEventListener("click", function () {
+      console.log("humbuger Clicked!!")
+      dropdown.classList.toggle("hidden");
+      cross.classList.toggle("hidden");
+      humbuger.classList.toggle("hidden");
+    })
+
+    cross.addEventListener("click", function () {
+      humbuger.classList.toggle("hidden");
+      dropdown.classList.toggle("hidden");
+      cross.classList.toggle("hidden");
+    })
+
+    home.addEventListener("click", function () {
+      dropdown.classList.toggle("hidden");
+      cross.classList.toggle("hidden");
+      humbuger.classList.toggle("hidden");
+    })
+
+    aboutPage.addEventListener("click", function () {
+      dropdown.classList.toggle("hidden");
+      cross.classList.toggle("hidden");
+      humbuger.classList.toggle("hidden");
+    })
+
+  </script>
+
+</body>
+
+</html>

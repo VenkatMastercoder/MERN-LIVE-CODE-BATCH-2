@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CallBacks</title>
+</head>
+
+<body>
+  <p>test</p>
+
+  <button id="stopBtn">STOP setInterval</button>
+
+  <button id="stopBtn2">STOP setTimeout</button>
+
+  <script>
+
+    function add(a, b) {
+      // a,b -> para -> VALUE
+      console.log("ans", a + b)
+    }
+
+    add(5, 5) // Argument
+    // A callback is a function that is passed as Arguments to another Function
+
+    // Basic Callback Function
+    function message(otherfunction) {
+      // otherfunction -> ITS ALSO AN FUNCTION
+      console.log("HIII");
+      otherfunction("HELFERFELO");
+      console.log("HELLO");
+    }
+
+    message(function (E) {
+      console.log(E)
+      console.log("CALLED!!")
+    })
+
+    // 
+
+    /*
+    Schedulers 
+      - The Schedulers are used to Schedule the execution of callback fuction
+    types 
+      - setInterval() - this will Repeat again and again after that time
+      - clearInterval() - this will help to clear after that time
+      
+      - setTimeout() - this will only onces after that time
+      - clearTimeout() -  this will help to clear before that time
+    */
+    // 1000 millisec = 1 sec 
+    // let counter1 = 0
+    // let counter1Id = setInterval(function () {
+    //   counter1 = counter1 + 1
+    //   console.log(counter1)
+    // }, 1000)
+
+    // const stopBtn = document.getElementById("stopBtn") // <button></button>
+
+    // stopBtn.addEventListener("click", function () {
+    //   clearInterval(counterId)
+    // })
+
+    let counter2 = 0
+    let counter2Id = setTimeout(function () {
+      counter2 = counter2 + 1
+      console.log(counter2)
+    }, 3000)
+
+    const stopBtn2 = document.getElementById("stopBtn2"); // <button></button>
+
+    stopBtn2.addEventListener("click", function () {
+      clearTimeout(counter2Id)
+    })
+
+  </script>
+
+
+</body>
+
+</html>

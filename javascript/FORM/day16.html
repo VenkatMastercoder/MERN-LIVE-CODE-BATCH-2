@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+</head>
+
+<body>
+
+  <!--
+    STEP 1 : ALL THE FORM ELEMENT SHOULD BE WRAP UP IN A Form Tag   
+          - Enter or Press Sumbit Button you Form will be SUBMIT EVENT WILL BE Trigger
+
+    STEP 2 : YOU HAVE TO HANDLE ALL THE EVENT USING NEW WAY  - addEventListener
+
+    STEP 3 : event.preventDefault(); ==> IT PREVENT FROM PAGE RELOAD
+
+    STEP 4 : VALIDFORM 
+              - VALIDATE THE FROM FIELD - IT SHOULD NOT BE EMPTY 
+              - VALIDFORM THE FROM DATA - Regular Expression 
+
+    STEP 5 : SEND THE FORM DATA
+  -->
+  
+  <!-- Contact Form Stating -->
+  <form id="form">
+    <!-- Enter or Press Sumbit Button you Form will be Trigger -->
+    <input type="text" placeholder="Enter Name" id="name" />
+    <p id="nameError"></p>
+
+    <input type="password" placeholder="Enter Password" id="password" />
+    <p id="passwordError"></p>
+
+    <button type="submit">Sumbit</button>
+  </form>
+  <!-- Contact Form Ending -->
+
+  <script>
+
+    /*
+      Diff Ways to Handle Event in JavaScript
+        - inline  - onclick="Submit()" ❌
+        - internal -  btn.onclick ❌
+        - New Way to Handle Event 
+          - addEventListener
+            - CLICK 
+            - SUMBIT 
+            - BLUR
+            - change
+    */
+    const form = document.getElementById("form"); // <form></form>
+    const name = document.getElementById("name"); // <input id="name"/>
+    const password = document.getElementById("password"); // <input id="password"/>
+
+    const nameError = document.getElementById("nameError");
+    const passwordError = document.getElementById("passwordError");
+
+    name.addEventListener("change", function (e) {
+      if (e.target.value === "") {
+        nameError.textContent = "required field"
+      }
+      else {
+        nameError.textContent = ""
+      }
+    })
+
+    password.addEventListener("blur", function (e) {
+      if (e.target.value === "") {
+        passwordError.textContent = "required field"
+      }
+      else {
+        passwordError.textContent = ""
+      }
+    })
+
+    function validateFormData(name, password) {
+
+      if (name === "") {
+        console.log("required field")
+        nameError.textContent = "required field"
+
+      }
+      if (password === "") {
+        passwordError.textContent = "required field"
+      }
+      else {
+        console.log("Form Data name from function:", name)
+        console.log("Form Data Password from function:", password)
+      }
+
+    }
+
+    form.addEventListener("submit", function Submit(event) {
+      event.preventDefault();
+      console.log("Form Sumbit")
+
+      validateFormData(name.value, password.value)
+    })
+
+  </script>
+
+</body>
+
+</html>

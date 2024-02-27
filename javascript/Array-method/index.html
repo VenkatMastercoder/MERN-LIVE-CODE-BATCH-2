@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Method</title>
+</head>
+
+<body>
+
+
+  <script>
+
+    // Array Method 
+
+    // - Map { For loop }
+
+
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8]
+    let arr2 = [2, 2]
+
+    arr.map(function (e) {
+      console.log(e)
+    })
+
+    let ans = 0
+
+    arr2.map(function (e) {
+      ans = ans + e
+    })
+    console.log(ans)
+
+    const result = arr2.map(function (num) {
+      return num * num
+    })
+    console.log(result)
+
+    // Filter - without it
+    console.log("-----")
+    arr.map(function (e) {
+      if (e > 6) {
+        console.log(e)
+      }
+    })
+
+    // Filter - Where you can Provide Condition - Will Return a Array
+    const anss = arr.filter(function (num) {
+      return num > 5
+    })
+    console.log(anss)
+
+    // Funtion 
+    /*
+      - Arrow Function
+    */
+    // Before ES6
+    function name() {
+      console.log("This a Function")
+    }
+
+    name()
+
+    const name2 = () => {
+      console.log("This a Arrow Function")
+    }
+
+    name2()
+
+    // const anss = arr.filter(function (num) {
+    //   return num > 5
+    // })
+
+    const a = arr.filter((num) => num > 5)
+
+    let arr5 = [1, 2, 3];
+
+    const reduce = arr5.reduce((intialValue, currentValue) => intialValue + currentValue)
+    console.log(reduce)
+
+
+    // map , filter - Very Important
+
+    // other - reduce , split , flat
+
+    let string = "Hello_World"
+    console.log(string.split("_"))
+
+    let f = [1, 2, 3, [[[6, 7, 8]]]]
+    console.log(f.flat(3))
+
+    let test = "eijbotdrogr"
+    let test2 = "DUUHGGHR HELLO"
+    let test3 = " HELLO"
+
+    // Length 
+    console.log(test.length)
+
+    console.log(test.toUpperCase())
+
+    console.log(test.toLowerCase())
+
+    console.log(test2.includes("HELLO"))
+
+    console.log(test3.trim())
+
+  </script>
+
+
+</body>
+
+</html>

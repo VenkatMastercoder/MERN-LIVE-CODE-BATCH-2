@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rest & Spread</title>
+</head>
+
+<body>
+
+  <!-- 
+    Spread Operator 
+
+  -->
+
+
+  <script>
+    // Spread Operator  --> ... -->IT'S USED TO UNPACK into Individual Elements
+    let car = [7, 8];
+    let bus = [9, 10];
+
+    /*
+      Array - let car = [7, 8]; let bus = [9, 10];
+        - Copy - let car2 = [...car];
+        - Concatenation - let sum = [...car, ...bus]
+
+      Object - {Key:value}  let brand = { name: "bmw", color: "Red" }
+        - Copy - let brand2 = { ...brand }
+        - Concatenation - let brandDetails = { ...brand, BrandCity: "Chennai", BrandValue: "100B" }
+    */
+
+    // [ 7,8,9,10]
+
+    // Concatenation [ Adding two Array ]
+    let sum = [...car, ...bus]
+
+    // [6,7,8,9,10,11]
+    let spread = [6, ...car, ...bus, 11]
+
+    console.log("New:", spread)
+
+    // copy - Spread Operator
+    let car2 = [...car, car];
+    console.log("car2:", car2);
+
+    let car3 = car;
+    console.log("car3:", car3);
+    console.log(sum)
+
+    // Spread in Object 
+    let brand = { name: "bmw", color: "Red" }
+
+    // Copy
+    let brand2 = { ...brand }
+    // let brand3 = brand + brandDetails; ❌
+    console.log("Brand2:", brand2)
+
+    // Concatenation
+    // {name: "bmw", color: "Red" , BrandCity:"xx",BrandValue:"rrr"}
+    let brandDetails = { ...brand, BrandCity: "Chennai", BrandValue: "100B" }
+    console.log("brandDetails", brandDetails);
+
+    function mul(x, y, z) {
+      return x * y * z
+    }
+
+    let arr = [1, 2, 3, 4, 5, 6];
+    let obj = { num: [1, 2, 3, 4, 5, 6] }
+
+    console.log(mul(...arr))
+    console.log(mul(...obj.num))
+
+    // Rest Parameter --> ... --> IT'S USED TO PACK into Array
+    // [ Destructing on fly - Rest Parameter ]
+
+
+    /*
+      Array - let car = [7, 8]; let bus = [9, 10];
+        
+      Object - {Key:value}  let brand = { name: "bmw", color: "Red" }
+        
+    */
+
+    // [a] =  [7, 8];
+
+    let [a, ...rest] = [7, 8]
+    console.log(a)
+
+    let { name, ...rest1 } = { name: "bmw", color: "Red" }
+    console.log(name)
+    console.log(rest1)
+    console.log("-------");
+    
+    function add(x, y, ...rest) {
+      console.log(x)
+      console.log(y)
+      console.log("add", x + y)
+      console.log("rest:", rest)
+    }
+    let arr2 = [1, 2, 3, 4, 5, 6];
+
+    add(1,2,3,4,5,6,7,8,9,10)
+
+  </script>
+
+</body>
+
+</html>

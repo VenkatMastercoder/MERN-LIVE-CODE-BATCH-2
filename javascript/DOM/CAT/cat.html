@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>DAY - 5</title>
+</head>
+
+<body>
+
+  <!-- STEP : 1 - YOU NEED TO GET THE ELEMNT FROM DOM TREE USING DOM API [ document.getElementById() ] getterMethod
+
+  STEP : 2 - YOU NEED TO HANDLE THE EVENT ON THE ELEMENT [ onclick ] Event Handling
+
+  STEP : 3 - YOU NEED TO CHANGE THE CONTENT OF THE ELEMENT [ textContent ] Property -->
+
+  <div class="bg-black">
+    <div>
+      <img src="https://ik.imagekit.io/4z8covdo9/Full%20stack/bulb-go-on-img.png?updatedAt=1702818139573" alt="Bulb"
+        id="bulbImg" class="h-40" />
+      <img src="https://ik.imagekit.io/4z8covdo9/Full%20stack/cat-img.png?updatedAt=1702818167774" alt="cat"
+        id="catImg" class="h-40"/>
+
+    </div>
+    <p id="pTag" class="bg-green-500">Switched On</p>
+    <div class="bg-yellow">
+      <button onclick="switchOn()" class="bg-green-500" id="btnOnButton" >ON</button>
+      <button onclick="switchOff()" class="bg-green-500" id="btnOffButton">OFF</button>
+    </div>
+  </div>
+
+  <script>
+    const catImgElement = document.getElementById("catImg"); // <img/>
+    const bulbImgElement = document.getElementById("bulbImg"); // <img/>
+
+    const pTagElement = document.getElementById("pTag"); // <p></p>
+
+    const btnOnButton = document.getElementById("btnOnButton"); // <button>ON</button>
+
+    const btnOffButton = document.getElementById("btnOffButton"); // <button>Off</button>
+
+
+    function switchOn() {
+      catImgElement.src = "https://ik.imagekit.io/4z8covdo9/Full%20stack/cat-img.png?updatedAt=1702818167774"
+      bulbImgElement.src = "https://ik.imagekit.io/4z8covdo9/Full%20stack/bulb-go-on-img.png?updatedAt=1702818139573";
+      pTagElement.textContent = "Switched On";
+      btnOnButton.style.backgroundColor = "green";
+      btnOffButton.style.backgroundColor = "white";
+      // console.log("switchOn");
+    }
+
+    function switchOff() {
+      catImgElement.src = "https://ik.imagekit.io/4z8covdo9/Full%20stack/cat-eyes-img.png?updatedAt=1702818102345";
+      bulbImgElement.src = "https://ik.imagekit.io/4z8covdo9/Full%20stack/bulb-go-off-img.png?updatedAt=1702818065200";
+      console.log("switchOff");
+      pTagElement.textContent = "Switched Off";
+      btnOffButton.style.backgroundColor = "red";
+      btnOnButton.style.backgroundColor = "white";
+    }
+
+
+  </script>
+
+</body>
+
+</html>

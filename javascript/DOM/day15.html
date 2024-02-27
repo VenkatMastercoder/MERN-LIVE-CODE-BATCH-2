@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>JAVASCRIPT DAY - 3</title>
+
+</head>
+
+<body>
+
+  <p id="p1">P1</p> <!--<p id="p1">P2</p>-->
+  <p id="p2">P2</p>
+
+  <button onclick="btnclick()">SUMBIT</button>
+
+  <!-- 
+    WHAT IS DOM API ?? 
+      - DOM API is a set of methods and properties that allow us to manipulate the DOM tree. So that we can change the content, structure and style of the website on Runtime Dyna.
+
+    - Method :
+      - getterMethod - GET THE ELEMENT FROM DOM TREE
+        - document.getElementById() 
+      - setterMethod - TO SET OR CREATE NEW ELEMENTS INTO DOM TREE
+
+    - Property :
+       - textContent - TO GET OR SET THE [ TEXT Element] CONTENT OF THE ELEMENT
+       - style. - All the CSS Style Properties
+       - src - TO GET OR SET THE [ IMG Element ] SRC ATTRIBUTE VALUE
+    
+    - Event Handing :
+      - onclick - TO HANDLE THE CLICK EVENT ON THE ELEMENT
+        - to Add onclick event handler on the element to HTML 3 WAY 
+
+    DOM TREE 
+    -Document [ Entry Point ]
+      - html [ Root Node ]
+        - head
+          - title
+        - body
+          - p
+          - p
+          - button
+    -->
+
+  <script>
+    const paragraphElemnt = document.getElementById("p1"); // <p>P1</p>
+    const paragraphElemnt2 = document.getElementById("p2") // <p>P2</p>
+    console.log(paragraphElemnt, paragraphElemnt2);
+
+    function btnclick() {
+      paragraphElemnt.textContent = "P1 CHANGED";
+      paragraphElemnt2.textContent = "P2 CHANGED";
+    }
+  </script>
+
+</body>
+
+</html>
